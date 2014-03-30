@@ -32,6 +32,7 @@
 		FDD1C7BE18E8AFA20027C278 /* TSweetRest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSweetRest.m; sourceTree = "<group>"; };
 		FDD1C7C018E8AFB50027C278 /* TSweetResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSweetResponse.h; sourceTree = "<group>"; };
 		FDD1C7C118E8AFB50027C278 /* TSweetResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSweetResponse.m; sourceTree = "<group>"; };
+		FDD1C7C318E8B0DA0027C278 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		FDEEA25D18E8ADDE003D520A /* TSweet */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TSweet; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDEEA26018E8ADDE003D520A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FDEEA26318E8ADDE003D520A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -54,6 +55,7 @@
 		FDEEA25418E8ADDE003D520A = {
 			isa = PBXGroup;
 			children = (
+				FDD1C7C318E8B0DA0027C278 /* README.md */,
 				FDEEA26218E8ADDE003D520A /* TSweet */,
 				FDEEA25F18E8ADDE003D520A /* Frameworks */,
 				FDEEA25E18E8ADDE003D520A /* Products */,
