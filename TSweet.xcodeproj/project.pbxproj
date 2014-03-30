@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FDD1C7BF18E8AFA20027C278 /* TSweetRest.m in Sources */ = {isa = PBXBuildFile; fileRef = FDD1C7BE18E8AFA20027C278 /* TSweetRest.m */; };
+		FDD1C7C218E8AFB50027C278 /* TSweetResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = FDD1C7C118E8AFB50027C278 /* TSweetResponse.m */; };
 		FDEEA26118E8ADDE003D520A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDEEA26018E8ADDE003D520A /* Foundation.framework */; };
 		FDEEA26418E8ADDE003D520A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FDEEA26318E8ADDE003D520A /* main.m */; };
 		FDEEA26818E8ADDE003D520A /* TSweet.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = FDEEA26718E8ADDE003D520A /* TSweet.1 */; };
@@ -26,6 +28,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		FDD1C7BD18E8AFA20027C278 /* TSweetRest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSweetRest.h; sourceTree = "<group>"; };
+		FDD1C7BE18E8AFA20027C278 /* TSweetRest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSweetRest.m; sourceTree = "<group>"; };
+		FDD1C7C018E8AFB50027C278 /* TSweetResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSweetResponse.h; sourceTree = "<group>"; };
+		FDD1C7C118E8AFB50027C278 /* TSweetResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSweetResponse.m; sourceTree = "<group>"; };
 		FDEEA25D18E8ADDE003D520A /* TSweet */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TSweet; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDEEA26018E8ADDE003D520A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FDEEA26318E8ADDE003D520A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -76,6 +82,10 @@
 				FDEEA26318E8ADDE003D520A /* main.m */,
 				FDEEA26718E8ADDE003D520A /* TSweet.1 */,
 				FDEEA26518E8ADDE003D520A /* Supporting Files */,
+				FDD1C7BD18E8AFA20027C278 /* TSweetRest.h */,
+				FDD1C7BE18E8AFA20027C278 /* TSweetRest.m */,
+				FDD1C7C018E8AFB50027C278 /* TSweetResponse.h */,
+				FDD1C7C118E8AFB50027C278 /* TSweetResponse.m */,
 			);
 			path = TSweet;
 			sourceTree = "<group>";
@@ -140,6 +150,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDEEA26418E8ADDE003D520A /* main.m in Sources */,
+				FDD1C7C218E8AFB50027C278 /* TSweetResponse.m in Sources */,
+				FDD1C7BF18E8AFA20027C278 /* TSweetRest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,6 +265,7 @@
 				FDEEA26D18E8ADDE003D520A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
