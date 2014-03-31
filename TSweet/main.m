@@ -7,14 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "TSweetRest.h"
 
 int main(int argc, const char * argv[])
 {
 
     @autoreleasepool {
         
-        // insert code here...
-        NSLog(@"Hello, World!");
+        TSweetRest * restAPI = [TSweetRest sharedSweetRest];
+        TSweetResponse * tsr = [restAPI get:@"/users/token/966553085572" isLoggedIn:YES];
+        
+        NSLog(@"code: %ld, body: %@", tsr.code, tsr.body);
         
     }
     return 0;

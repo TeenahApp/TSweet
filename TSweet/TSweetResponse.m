@@ -10,4 +10,15 @@
 
 @implementation TSweetResponse
 
+-(id)initWithParameters:(NSInteger)code body:(NSString *)body {
+    
+    if (self = [super init])
+    {
+        self.code = code;
+        self.body = body;
+    }
+    
+    return self;
+}
+
 @end

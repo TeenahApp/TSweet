@@ -10,4 +10,10 @@
 
 @interface TSweetResponse : NSObject
 
+@property NSInteger code;
+@property NSString * body;
+
+- (id)  initWithParameters: (NSInteger) code
+                      body: (NSString *) body;
+
 @end
