@@ -10,4 +10,14 @@
 
 @implementation AutoCompletesCommunicator
 
++(id)shared
+{
+    static AutoCompletesCommunicator * shared = nil;
+    @synchronized(self) {
+        if (shared == nil)
+            shared = [[self alloc] init];
+    }
+    return shared;
+}
+
 @end

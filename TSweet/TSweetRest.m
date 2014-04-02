@@ -126,13 +126,22 @@
 
 -(TSweetResponse *) get:(NSString *)route
 {
-
     return [self request:get route:route parameters:nil];
 }
 
 -(TSweetResponse *) post:(NSString *)route parameters:(NSDictionary *)parameters
 {
     return [self request:post route:route parameters:parameters];
+}
+
+-(TSweetResponse *)put:(NSString *)route parameters:(NSDictionary *)parameters
+{
+    return [self request:put route:route parameters:parameters];
+}
+
+-(TSweetResponse *)delete:(NSString *)route parameters:(NSDictionary *)parameters
+{
+    return [self request:delete route:route parameters:parameters];
 }
 
 @end

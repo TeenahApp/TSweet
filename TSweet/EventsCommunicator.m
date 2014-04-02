@@ -10,4 +10,14 @@
 
 @implementation EventsCommunicator
 
++(id)shared
+{
+    static EventsCommunicator * shared = nil;
+    @synchronized(self) {
+        if (shared == nil)
+            shared = [[self alloc] init];
+    }
+    return shared;
+}
+
 @end

@@ -26,7 +26,7 @@
 
 -(TSweetResponse *) leave: (NSString *) circleId;
 
--(TSweetResponse *) getEvents: (NSString *) memberId;
+-(TSweetResponse *) getEvents: (NSString *) circleId;
 
 -(TSweetResponse *) getStats: (NSString *) circleId;
 

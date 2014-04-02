@@ -21,7 +21,7 @@
                        dob: (NSString *) dob
                        pob: (NSString *) pob
                        dod: (NSString *) dod
-                       pod: (NSString *) pods
+                       pod: (NSString *) pod
                      email: (NSString *) email;
 
 -(TSweetResponse *) uploadPhoto: (NSString *) memberId

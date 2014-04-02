@@ -10,4 +10,14 @@
 
 @implementation TrusteesCommunicator
 
++(id)shared
+{
+    static TrusteesCommunicator * shared = nil;
+    @synchronized(self) {
+        if (shared == nil)
+            shared = [[self alloc] init];
+    }
+    return shared;
+}
+
 @end

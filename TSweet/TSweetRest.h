@@ -44,6 +44,7 @@ enum method {
                     parameters:(NSDictionary *) parameters;
 
 
--(TSweetResponse *) delete: (NSString *) route;
+-(TSweetResponse *) delete: (NSString *) route
+                    parameters: (NSDictionary *) parameters;
 
 @end

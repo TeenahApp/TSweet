@@ -12,7 +12,7 @@
 
 +(id)shared
 {
-    static TSweetRest * shared = nil;
+    static UsersCommunicator * shared = nil;
     @synchronized(self) {
         if (shared == nil)
             shared = [[self alloc] init];
