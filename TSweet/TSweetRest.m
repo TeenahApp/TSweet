@@ -10,16 +10,18 @@
 
 @implementation TSweetRest
 
-+(id) sharedSweetRest {
-    static TSweetRest * sharedSweetRest = nil;
++(id) shared
+{
+    static TSweetRest * shared = nil;
     @synchronized(self) {
-        if (sharedSweetRest == nil)
-            sharedSweetRest = [[self alloc] init];
+        if (shared == nil)
+            shared = [[self alloc] init];
     }
-    return sharedSweetRest;
+    return shared;
 }
 
--(id)init {
+-(id)init
+{
 
     if (self = [super init])
     {
@@ -34,7 +36,7 @@
 -(TSweetResponse *) request:(enum method) method
                       route:(NSString *)route
                  parameters:(NSDictionary *)parameters
-                 userToken:(NSString *)userToken {
+{
 
     NSString * url = [[NSString alloc] initWithFormat:@"%@%@", self.apiUrl, route];
     
@@ -48,25 +50,49 @@
     [request setValue:self.appKey forHTTPHeaderField:@"X-App-Key"];
     [request setValue:self.appSecret forHTTPHeaderField:@"X-App-Secret"];
     
-    switch (method) {
+    // Add user token if exists.
+    [request setValue:self.userToken forHTTPHeaderField:@"X-User-Token"];
+    
+    // TODO: Consider cookies.
+
+    switch (method)
+    {
             
         case get:
             [request setHTTPMethod:@"GET"];
             break;
             
         case post:
+        {
             [request setHTTPMethod:@"POST"];
             [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
-            break;
+        }
+        break;
             
         case put:
             [request setHTTPMethod:@"PUT"];
+            [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
             break;
             
         case delete:
             [request setHTTPMethod:@"DELETE"];
             break;
     }
+    
+    // TODO:    Probably it is better to use: The block approach.
+    //          To avoid running the lookup algorithm for every key.
+    // http://stackoverflow.com/questions/1284429/is-there-a-way-to-iterate-over-a-dictionary
+    
+    NSMutableArray * pairs = [[NSMutableArray alloc] initWithCapacity:0];
+    
+    for (NSString * key in parameters) {
+        [pairs addObject:[NSString stringWithFormat:@"%@=%@", key, parameters[key]]];
+    }
+    
+    NSString * requestParameters = [pairs componentsJoinedByString:@"&"];
+    
+    // Set the body
+    [request setHTTPBody:[requestParameters dataUsingEncoding:NSUTF8StringEncoding]];
     
     // Response.
     NSHTTPURLResponse * response;
@@ -80,14 +106,33 @@
                                                        length:[responseData length]
                                                      encoding: NSUTF8StringEncoding];
     
-    return [[TSweetResponse alloc] initWithParameters:responseCode body:responseBody];
+    if ([response respondsToSelector:@selector(allHeaderFields)])
+    {
+        NSDictionary *reqh = [request allHTTPHeaderFields];
+        
+        NSLog(@"Request Headers:\n%@", [reqh description]);
+        NSLog(@"\n\nRequest Body:\n%@", [[NSString alloc] initWithData:[request HTTPBody] encoding:NSUTF8StringEncoding]);
+        
+        NSDictionary *resh = [response allHeaderFields];
+        
+        NSLog(@"Response Headers:\n%@", [resh description]);
+        NSLog(@"\n\nResponse Body:\n%@", responseBody);
+    }
+    
+    return [[TSweetResponse alloc] initWithParameters:responseCode body:responseData];
 }
 
 // http://stackoverflow.com/questions/7673127/xcode-ios-how-do-i-send-a-json-to-a-url-post-and-get-request-resolved
 
--(TSweetResponse *) get:(NSString *)route userToken:(NSString *)userToken {
+-(TSweetResponse *) get:(NSString *)route
+{
 
-    return [self request:get route:route parameters:nil userToken:userToken];
+    return [self request:get route:route parameters:nil];
+}
+
+-(TSweetResponse *) post:(NSString *)route parameters:(NSDictionary *)parameters
+{
+    return [self request:post route:route parameters:parameters];
 }
 
 @end

@@ -10,15 +10,23 @@
 
 @implementation TSweetResponse
 
--(id)initWithParameters:(NSInteger)code body:(NSString *)body {
+-(id)initWithParameters:(NSInteger)code body:(NSData *)body {
     
     if (self = [super init])
     {
+        NSError* error;
+        
         self.code = code;
         self.body = body;
+        self.json = [NSJSONSerialization JSONObjectWithData:self.body options:kNilOptions error:&error];
     }
     
     return self;
+}
+
+-(NSString *)description
+{
+    return [NSString stringWithFormat: @"Code: %ld, Body: %@", (long)self.code, self.json.description];
 }
 
 @end

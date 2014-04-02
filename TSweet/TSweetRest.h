@@ -28,27 +28,22 @@ enum method {
 // Teenah user token if logged in.
 @property NSString * userToken;
 
-+(id) sharedSweetRest;
++(id) shared;
 
 -(TSweetResponse *) request: (enum method) method
                       route: (NSString *) route
-                 parameters: (NSDictionary *) parameters
-                 userToken: (NSString *) userToken;
+                 parameters: (NSDictionary *) parameters;
 
 // HTTP verbs as methods.
--(TSweetResponse *) get: (NSString *) route
-                    userToken: (NSString *) userToken;
+-(TSweetResponse *) get: (NSString *) route;
 
 -(TSweetResponse *) post: (NSString *) route
-                    parameters:(NSDictionary *) parameters
-                    userToken: (NSString *) userToken;
+                    parameters:(NSDictionary *) parameters;
 
 -(TSweetResponse *) put: (NSString *) route
-                    parameters:(NSDictionary *) parameters
-                    userToken: (NSString *) userToken;
+                    parameters:(NSDictionary *) parameters;
 
 
--(TSweetResponse *) delete: (NSString *) route
-                    userToken: (NSString *) userToken;
+-(TSweetResponse *) delete: (NSString *) route;
 
 @end

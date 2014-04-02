@@ -11,9 +11,12 @@
 @interface TSweetResponse : NSObject
 
 @property NSInteger code;
-@property NSString * body;
+@property NSData * body;
+@property NSDictionary * json;
 
-- (id)  initWithParameters: (NSInteger) code
-                      body: (NSString *) body;
+-(id)  initWithParameters: (NSInteger) code
+                      body: (NSData *) body;
+
+-(NSString *) description;
 
 @end
