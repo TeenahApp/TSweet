@@ -20,4 +20,16 @@
     return shared;
 }
 
+-(TSweetResponse *)majors:(NSString *)query
+{
+    NSString * route = [NSString stringWithFormat:@"/majors/autocomplete/%@", query];
+    return [[TSweetRest shared] get:route];
+}
+
+-(TSweetResponse *)companies:(NSString *)query
+{
+    NSString * route = [NSString stringWithFormat:@"/companies/autocomplete/%@", query];
+    return [[TSweetRest shared] get:route];
+}
+
 @end
