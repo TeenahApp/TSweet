@@ -20,4 +20,28 @@
     return shared;
 }
 
+-(TSweetResponse *) like: (NSString *) mediaId
+{
+    NSString * route = [NSString stringWithFormat:@"/medias/%@/like", mediaId];
+    return [[TSweetRest shared] get:route];
+}
+
+-(TSweetResponse *) comment: (NSString *) mediaId
+                    comment: (NSString *) comment
+{
+    NSString * route = [NSString stringWithFormat:@"/medias/%@/comment", mediaId];
+    NSDictionary * parameters = @{
+                                  @"comment": comment
+                                  };
+    
+    return [[TSweetRest shared] post:route parameters: parameters];
+}
+
+-(TSweetResponse *) likeComment: (NSString *) mediaId
+                      commentId: (NSString *) commentId
+{
+    NSString * route = [NSString stringWithFormat:@"/medias/%@/comments/%@", mediaId, commentId];
+    return [[TSweetRest shared] get:route];
+}
+
 @end
