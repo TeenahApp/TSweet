@@ -111,6 +111,8 @@
 		FDEEA26218E8ADDE003D520A /* TSweet */ = {
 			isa = PBXGroup;
 			children = (
+				FDA9752018EA1AB7002824E8 /* UsersCommunicator.h */,
+				FDA9752118EA1AB7002824E8 /* UsersCommunicator.m */,
 				FDEEA26318E8ADDE003D520A /* main.m */,
 				FDEEA26718E8ADDE003D520A /* TSweet.1 */,
 				FDEEA26518E8ADDE003D520A /* Supporting Files */,
@@ -118,8 +120,6 @@
 				FDD1C7BE18E8AFA20027C278 /* TSweetRest.m */,
 				FDD1C7C018E8AFB50027C278 /* TSweetResponse.h */,
 				FDD1C7C118E8AFB50027C278 /* TSweetResponse.m */,
-				FDA9752018EA1AB7002824E8 /* UsersCommunicator.h */,
-				FDA9752118EA1AB7002824E8 /* UsersCommunicator.m */,
 				FD61510718EAFFE300501490 /* MembersCommunicator.h */,
 				FD61510A18EB669800501490 /* CirclesCommunicator.h */,
 				FD61510B18EB669800501490 /* CirclesCommunicator.m */,
