@@ -74,7 +74,7 @@
 
 -(TSweetResponse *) fetchMessages: (NSString *) circleId
 {
-    NSString * route = [NSString stringWithFormat:@"/circles/%@/stats", circleId];
+    NSString * route = [NSString stringWithFormat:@"/circles/%@/messages", circleId];
     return [[TSweetRest shared] get:route];
 }
 
