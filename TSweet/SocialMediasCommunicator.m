@@ -20,4 +20,31 @@
     return shared;
 }
 
+-(TSweetResponse *)create:(NSString *)name account:(NSString *)account
+{
+    NSString * route = [NSString stringWithFormat:@"/socialmedias"];
+    NSDictionary * parameters = @{
+                                  @"name": name,
+                                  @"account": account
+                                  };
+    
+    return [[TSweetRest shared] post:route parameters: parameters];
+}
+
+-(TSweetResponse *)update:(NSString *)socialMediaId account:(NSString *)account
+{
+    NSString * route = [NSString stringWithFormat:@"/socialmedias/%@", socialMediaId];
+    NSDictionary * parameters = @{
+                                  @"account": account
+                                  };
+    
+    return [[TSweetRest shared] put:route parameters: parameters];
+}
+
+-(TSweetResponse *)delete:(NSString *)socialMediaId
+{
+    NSString * route = [NSString stringWithFormat:@"/socialmedias/%@", socialMediaId];
+    return [[TSweetRest shared] delete:route];
+}
+
 @end
