@@ -16,7 +16,7 @@
 		FD6C112F18EC28B400D181A2 /* TrusteesCommunicator.m in Sources */ = {isa = PBXBuildFile; fileRef = FD6C112E18EC28B400D181A2 /* TrusteesCommunicator.m */; };
 		FD6C113218EC2B0100D181A2 /* AutoCompletesCommunicator.m in Sources */ = {isa = PBXBuildFile; fileRef = FD6C113118EC2B0100D181A2 /* AutoCompletesCommunicator.m */; };
 		FD6C113618EC58C600D181A2 /* Globals.m in Sources */ = {isa = PBXBuildFile; fileRef = FD6C113518EC58C600D181A2 /* Globals.m */; };
-		FDA9752218EA1AB7002824E8 /* UsersCommunicator.m in Sources */ = {isa = PBXBuildFile; fileRef = FDA9752118EA1AB7002824E8 /* UsersCommunicator.m */; };
+		FDA66FF518ECBB0E00E438EB /* UsersCommunicator.m in Sources */ = {isa = PBXBuildFile; fileRef = FDA66FF418ECBB0E00E438EB /* UsersCommunicator.m */; };
 		FDD1C7BF18E8AFA20027C278 /* TSweetRest.m in Sources */ = {isa = PBXBuildFile; fileRef = FDD1C7BE18E8AFA20027C278 /* TSweetRest.m */; };
 		FDD1C7C218E8AFB50027C278 /* TSweetResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = FDD1C7C118E8AFB50027C278 /* TSweetResponse.m */; };
 		FDEEA26118E8ADDE003D520A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDEEA26018E8ADDE003D520A /* Foundation.framework */; };
@@ -56,8 +56,8 @@
 		FD6C113118EC2B0100D181A2 /* AutoCompletesCommunicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoCompletesCommunicator.m; sourceTree = "<group>"; };
 		FD6C113418EC58C600D181A2 /* Globals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Globals.h; sourceTree = "<group>"; };
 		FD6C113518EC58C600D181A2 /* Globals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Globals.m; sourceTree = "<group>"; };
-		FDA9752018EA1AB7002824E8 /* UsersCommunicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UsersCommunicator.h; path = ../UsersCommunicator.h; sourceTree = "<group>"; };
-		FDA9752118EA1AB7002824E8 /* UsersCommunicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UsersCommunicator.m; path = ../UsersCommunicator.m; sourceTree = "<group>"; };
+		FDA66FF318ECBB0E00E438EB /* UsersCommunicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UsersCommunicator.h; sourceTree = "<group>"; };
+		FDA66FF418ECBB0E00E438EB /* UsersCommunicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UsersCommunicator.m; sourceTree = "<group>"; };
 		FDD1C7BD18E8AFA20027C278 /* TSweetRest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSweetRest.h; sourceTree = "<group>"; };
 		FDD1C7BE18E8AFA20027C278 /* TSweetRest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSweetRest.m; sourceTree = "<group>"; };
 		FDD1C7C018E8AFB50027C278 /* TSweetResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSweetResponse.h; sourceTree = "<group>"; };
@@ -111,8 +111,8 @@
 		FDEEA26218E8ADDE003D520A /* TSweet */ = {
 			isa = PBXGroup;
 			children = (
-				FDA9752018EA1AB7002824E8 /* UsersCommunicator.h */,
-				FDA9752118EA1AB7002824E8 /* UsersCommunicator.m */,
+				FDA66FF318ECBB0E00E438EB /* UsersCommunicator.h */,
+				FDA66FF418ECBB0E00E438EB /* UsersCommunicator.m */,
 				FDEEA26318E8ADDE003D520A /* main.m */,
 				FDEEA26718E8ADDE003D520A /* TSweet.1 */,
 				FDEEA26518E8ADDE003D520A /* Supporting Files */,
@@ -203,13 +203,13 @@
 			files = (
 				FDEEA26418E8ADDE003D520A /* main.m in Sources */,
 				FD6C112318EC18A100D181A2 /* EventsCommunicator.m in Sources */,
-				FDA9752218EA1AB7002824E8 /* UsersCommunicator.m in Sources */,
 				FD6C112918EC253600D181A2 /* MessagesCommunicator.m in Sources */,
 				FD6C113218EC2B0100D181A2 /* AutoCompletesCommunicator.m in Sources */,
 				FD6C112C18EC26BE00D181A2 /* SocialMediasCommunicator.m in Sources */,
 				FD6C113618EC58C600D181A2 /* Globals.m in Sources */,
 				FD6C112618EC236E00D181A2 /* MediasCommunicator.m in Sources */,
 				FD61510918EAFFE300501490 /* MembersCommunicator.m in Sources */,
+				FDA66FF518ECBB0E00E438EB /* UsersCommunicator.m in Sources */,
 				FDD1C7C218E8AFB50027C278 /* TSweetResponse.m in Sources */,
 				FD6C112F18EC28B400D181A2 /* TrusteesCommunicator.m in Sources */,
 				FD61510C18EB669800501490 /* CirclesCommunicator.m in Sources */,
